@@ -36,7 +36,9 @@
         } */
     </style>
 </head>
+
 <body  id="inicio" class="w-screen h-full overflow-x-hidden overflow-visible relative">
+    
     <header class="flex w-screen h-16 justify-between items-center pl-10 pr-10 gap-10 bg-white fixed z-20 ">
             <i class="fa-brands fa-shopify text-5xl text-lime-300"></i>
             <div class="flex w-full justify-between max-[767px]:hidden">
