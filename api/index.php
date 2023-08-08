@@ -67,11 +67,11 @@
             <div class="card w-10/12 h-full pt-4 flex gap-10  max-[767px]:flex-col max-[767px]:items-center min-[767px]:flex-wrap ">
                 <?php
                 $cards = array(
-                    array('image' => 'api/img/earbuds.png', 'content' => 'Wireless Earbuds, IPX8', 'moeda' => 'R$', 'preco' => '89,90'),
-                    array('image' => 'api/img/headset.png', 'content' => 'Headset Logitech G233 Prodigy', 'moeda' => 'R$', 'preco' => '259,90'),
-                    array('image' => 'api/img/ps4.png', 'content' => 'Playstation 4 Slim', 'moeda' => 'R$', 'preco' => '3229,90'),
-                    array('image' => 'api/img/iphoneX.png', 'content' => 'Iphone X - Usado', 'moeda' => 'R$', 'preco' => '1.329,90'),
-                    array('image' => 'api/img/mouseG502.png', 'content' => 'Mouse Logitech G502', 'moeda' => 'R$', 'preco' => '129,90'),        
+                    array('image' => 'img/earbuds.png', 'content' => 'Wireless Earbuds, IPX8', 'moeda' => 'R$', 'preco' => '89,90'),
+                    array('image' => 'img/headset.png', 'content' => 'Headset Logitech G233 Prodigy', 'moeda' => 'R$', 'preco' => '259,90'),
+                    array('image' => 'img/ps4.png', 'content' => 'Playstation 4 Slim', 'moeda' => 'R$', 'preco' => '3229,90'),
+                    array('image' => 'img/iphoneX.png', 'content' => 'Iphone X - Usado', 'moeda' => 'R$', 'preco' => '1.329,90'),
+                    array('image' => 'img/mouseG502.png', 'content' => 'Mouse Logitech G502', 'moeda' => 'R$', 'preco' => '129,90'),        
                 );
 
                 foreach ($cards as $index => $card) {
