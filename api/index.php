@@ -16,6 +16,15 @@
 
         heartFull.style.display = heartFull.style.display === "none" ? "block" : "none";
     }
+
+        window.addEventListener("scroll", function() {
+        const header = document.querySelector(".header");
+            if (window.scrollY > 0) {
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+            } else {
+                header.style.boxShadow = "none";
+            }
+        });
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="shortcut icon" href="/src/img/icone.png" type="image/png">
@@ -23,23 +32,19 @@
     <link rel="icon" href="/src/img/logo2.png" type="png">
     <title>E-COMMERCE - CARD/LIST</title>
     <style>
-        /* .card {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px;
-            width: 200px;
-            background-color: #f9f9f9;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
-            display: inline-block;
-        } */
+        .header {
+        background-color: #ffffff;
+        box-shadow: none; /*Valor inicial de estado*/
+        transition: box-shadow 0.5s ease; /*Transição de efeito suave*/    
+        }
     </style>
 </head>
 
 <body  id="inicio" class="w-screen h-screen overflow-x-hidden overflow-visible relative bg-white ">
     
-    <header class="flex w-screen h-16 justify-between items-center  pl-10 pr-10 gap-10 bg-white fixed z-20 max-[767px]: max-[767px]:h-24 border">
-            <i class="fa-brands fa-shopify text-5xl text-lime-300"></i>
+    <header class="header flex w-full justify-center h-16 bg-white fixed z-20 max-[767px]:h-24 ">
+        <div class="header w-full h-full flex justify-between items-center pl-10 pr-10 gap-10 min-[1024px]:w-3/5 min-[1024px]:p-0 ">
+        <i class="fa-brands fa-shopify text-5xl text-lime-300"></i>
             <div class="flex w-full justify-between max-[767px]:hidden">
                 <div class="left">
                     <ul class="flex items-center gap-6">
@@ -60,6 +65,8 @@
                 </div>
             </div>
             <i class="fa-solid fa-bars min-[768px]:hidden"></i>
+        </div>
+            
     </header>
     <main class="w-full h-auto justify-center flex items-center flex-col pt-16  max-[767px]:pt-24" >
         <h1 class="font-semibold text-4xl mt-4 max-[767px]:text-xl ">NOVOS PRODUTOS</h1>
@@ -77,7 +84,7 @@
 
                 foreach ($cards as $index => $card) {
                     //inicia-card
-                    echo '<a href="#" class="item relative rounded-xl flex flex-col w-2/12 h-96 border-b pb-6 bg-white items-center hover:drop-shadow-2xl hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 max-[767px]:flex-row max-[767px]:w-full max-[767px]:h-56 max-[767px]:rounded-none max-[767px]:pb-0">';
+                    echo '<a href="#" class="item relative rounded-xl flex flex-col w-2/12 h-96 border-b pb-6 bg-white items-center hover:drop-shadow-2xl hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 max-[767px]:flex-row max-[767px]:w-full max-[767px]:h-56 max-[767px]:rounded-none max-[767px]:pb-0 min-[768px]:w-5/12 min-[1300px]:w-5/12 min-[1600px]:w-3/12">';
                         //inicia-imagem
                         echo '<div class="img relative w-full h-3/4 bg-zinc-300 rounded-t-xl max-[767px]:h-full max-[767px]:w-6/12 max-[767px]:rounded-none">';
                             echo '<img class="w-full h-full object-scale-down p-6 max-[767px]:object-contain " src="' . $card['image'] . '" alt="Imagem">';
@@ -85,12 +92,12 @@
                         //termina-imagem
 
                         // Elemento do botão de favorito vazio
-                        echo '<div class="absolute flex justify-center items-center w-10 h-10 right-3 top-3 rounded-full p-2 z-10">';
+                        echo '<div class="absolute flex justify-center items-center w-10 h-10 right-3 top-3 rounded-full p-2 z-10 max-[767px]:right-6">';
                         echo '<i id="heartEmpty' . $index . '" class="fa-regular fa-heart text-white text-2xl max-[767px]:text-zinc-300" onclick="toggleFav(' . $index . ')"></i>';
                         echo '</div>';
 
                         // Elemento do botão de favorito cheio
-                        echo '<div id="heartFull' . $index . '" class="absolute flex justify-center items-center w-10 h-10 right-3 top-2 rounded-full p-2 z-10 hidden drop-shadow-md">';
+                        echo '<div id="heartFull' . $index . '" class="absolute flex justify-center items-center w-10 h-10 right-3 top-2 rounded-full p-2 z-10 hidden max-[767px]:right-6">';
                         echo '<i class="fa-solid fa-heart text-2xl text-red-500 w-full h-full ... " onclick="toggleFav(' . $index . ')"></i>';
                         echo '</div>';
 
