@@ -49,11 +49,11 @@
                     </ul>
                 </div>
                 <div class="right flex gap-4">
-                    <a href="#" class="perfil flex items-center gap-2">
-                        <i class="fa-solid fa-user"></i>
+                    <a href="#" class="perfil flex items-center gap-2 hover:text-lime-500">
+                        <i class="fa-solid fa-user "></i>
                         <p class="">Entrar</p>
                     </a>
-                    <a href="#" class="perfil flex items-center gap-2">
+                    <a href="#" class="perfil flex items-center gap-2 hover:text-lime-500">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <p class="">Entrar</p>
                     </a>
@@ -77,7 +77,7 @@
 
                 foreach ($cards as $index => $card) {
                     //inicia-card
-                    echo '<a href="#" class="item relative rounded-xl flex flex-col w-2/12 h-72  bg-white items-center hover:drop-shadow-2xl hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 max-[767px]:flex-row max-[767px]:w-full max-[767px]:h-56 max-[767px]:rounded-none">';
+                    echo '<a href="#" class="item relative rounded-xl flex flex-col w-2/12 h-96 border-b pb-6 bg-white items-center hover:drop-shadow-2xl hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 max-[767px]:flex-row max-[767px]:w-full max-[767px]:h-56 max-[767px]:rounded-none max-[767px]:pb-0">';
                         //inicia-imagem
                         echo '<div class="img relative w-full h-3/4 bg-zinc-300 rounded-t-xl max-[767px]:h-full max-[767px]:w-6/12 max-[767px]:rounded-none">';
                             echo '<img class="w-full h-full object-scale-down p-6 max-[767px]:object-contain " src="' . $card['image'] . '" alt="Imagem">';
@@ -90,7 +90,7 @@
                         echo '</div>';
 
                         // Elemento do botão de favorito cheio
-                        echo '<div id="heartFull' . $index . '" class="absolute flex justify-center items-center w-10 h-10 right-3 top-2 rounded-full p-2 z-10 hidden">';
+                        echo '<div id="heartFull' . $index . '" class="absolute flex justify-center items-center w-10 h-10 right-3 top-2 rounded-full p-2 z-10 hidden drop-shadow-md">';
                         echo '<i class="fa-solid fa-heart text-2xl text-red-500 w-full h-full ... " onclick="toggleFav(' . $index . ')"></i>';
                         echo '</div>';
 
@@ -106,7 +106,7 @@
                         echo '</div>';
                         //termina-preco
 
-                        echo '<i class="fa-solid fa-circle-plus absolute bottom-2 hover:rounded-xl w-full text-center text-lime-300 text-lg max-[767px]:bottom-4 max-[767px]:drop-shadow-xl"></i>';
+                        echo '<i class="fa-solid fa-circle-plus absolute bottom-2 hover:rounded-xl w-full text-center text-lime-300 text-lg max-[767px]:bottom-4 max-[767px]:drop-shadow-xl max-[767px]:"></i>';
 
                         echo '</a>';
                         //termina-card
