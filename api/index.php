@@ -11,16 +11,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script>
        function toggleFav(cardIndex) {
-        var heartEmpty = document.getElementById("heartEmpty_" + cardIndex);
-        var heartFull = document.getElementById("heartFull_" + cardIndex);
+        var heartEmpty = document.getElementById("heartEmpty" + cardIndex);
+        var heartFull = document.getElementById("heartFull" + cardIndex);
 
-        heartEmpty.style.display = heartEmpty.style.display === "none" ? "block" : "none";
         heartFull.style.display = heartFull.style.display === "none" ? "block" : "none";
     }
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="shortcut icon" href="/src/img/icone.png" type="image/png">
-    <link rel="stylesheet" href="/css/style.css">
+    
     <link rel="icon" href="/src/img/logo2.png" type="png">
     <title>E-COMMERCE - CARD/LIST</title>
     <style>
@@ -37,16 +36,16 @@
     </style>
 </head>
 
-<body  id="inicio" class="w-screen h-full overflow-x-hidden overflow-visible relative">
+<body  id="inicio" class="w-screen h-screen overflow-x-hidden overflow-visible relative bg-white ">
     
-    <header class="flex w-screen h-16 justify-between items-center pl-10 pr-10 gap-10 bg-white fixed z-20 ">
+    <header class="flex w-screen h-16 justify-between items-center  pl-10 pr-10 gap-10 bg-white fixed z-20 max-[767px]: max-[767px]:h-24 border">
             <i class="fa-brands fa-shopify text-5xl text-lime-300"></i>
             <div class="flex w-full justify-between max-[767px]:hidden">
                 <div class="left">
                     <ul class="flex items-center gap-6">
-                        <li><a class="hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 hover:duration-100 pb-4" href="">Início</a></li>
-                        <li><a class="hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 hover:duration-100 pb-4" href="">Produtos</a></li>
-                        <li><a class="hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 hover:duration-100 pb-4" href="">Contato</a></li>
+                        <li><a class="hover:border-b-4 hover:drop-shadow-lg hover:border-lime-300 hover:transition-all hover:delay-100 hover:duration-100 pb-4" href="">Início</a></li>
+                        <li><a class="hover:border-b-4 hover:drop-shadow-lg hover:border-lime-300 hover:transition-all hover:delay-100 hover:duration-100 pb-4" href="">Produtos</a></li>
+                        <li><a class="hover:border-b-4 hover:drop-shadow-lg hover:border-lime-300 hover:transition-all hover:delay-100 hover:duration-100 pb-4" href="">Contato</a></li>
                     </ul>
                 </div>
                 <div class="right flex gap-4">
@@ -62,59 +61,58 @@
             </div>
             <i class="fa-solid fa-bars min-[768px]:hidden"></i>
     </header>
-    <main class="w-full h-screen items-center flex flex-col pt-16">
-        <div class="w-full h-full  pt-4 flex justify-end gap-10  max-[767px]:flex-col max-[767px]:items-center min-[767px]:flex-wrap ">
-            <div class="card w-10/12 h-full pt-4 flex gap-10  max-[767px]:flex-col max-[767px]:items-center min-[767px]:flex-wrap ">
-                <?php
+    <main class="w-full h-auto justify-center flex items-center flex-col pt-16  max-[767px]:pt-24" >
+        <h1 class="font-semibold text-4xl mt-4 max-[767px]:text-xl ">NOVOS PRODUTOS</h1>
+        <div class="w-8/12 flex flex-wrap justify-center gap-2 mt-6 max-[767px]:w-full max-[767px]:gap-3 ">
+            <?php
                 $cards = array(
                     array('image' => 'img/earbuds.png', 'content' => 'Wireless Earbuds, IPX8', 'moeda' => 'R$', 'preco' => '89,90'),
                     array('image' => 'img/headset.png', 'content' => 'Headset Logitech G233 Prodigy', 'moeda' => 'R$', 'preco' => '259,90'),
                     array('image' => 'img/ps4.png', 'content' => 'Playstation 4 Slim', 'moeda' => 'R$', 'preco' => '3229,90'),
                     array('image' => 'img/iphoneX.png', 'content' => 'Iphone X - Usado', 'moeda' => 'R$', 'preco' => '1.329,90'),
                     array('image' => 'img/mouseG502.png', 'content' => 'Mouse Logitech G502', 'moeda' => 'R$', 'preco' => '129,90'),        
+                    array('image' => 'img/xiaomi.png', 'content' => 'Xiaomi Mi 1', 'moeda' => 'R$', 'preco' => '785,99'),        
+                    array('image' => 'img/notebook_xiaomi.png', 'content' => 'Xiaomi Mi Notebook Air 12.5', 'moeda' => 'R$', 'preco' => '5.785,99'),             
                 );
 
                 foreach ($cards as $index => $card) {
                     //inicia-card
-                    echo '<a href="#" class="item relative rounded-xl flex flex-col w-3/12 h-2/5 bg-white items-center -mb-36 hover:drop-shadow-2xl hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 max-[767px]:flex-row max-[767px]:w-6/12 max-[767px]:h-56 ">';
+                    echo '<a href="#" class="item relative rounded-xl flex flex-col w-2/12 h-72  bg-white items-center hover:drop-shadow-2xl hover:border-b-4 hover:border-lime-300 hover:transition-all hover:delay-100 max-[767px]:flex-row max-[767px]:w-full max-[767px]:h-56 max-[767px]:rounded-none">';
                         //inicia-imagem
-                        echo '<div class="img relative w-full h-3/4  bg-zinc-300 rounded-t-xl max-[767px]:h-full max-[767px]:w-6/12">';
-                            echo '<img class="w-full h-full object-scale-down p-6" src="' . $card['image'] . '" alt="Imagem">';
+                        echo '<div class="img relative w-full h-3/4 bg-zinc-300 rounded-t-xl max-[767px]:h-full max-[767px]:w-6/12 max-[767px]:rounded-none">';
+                            echo '<img class="w-full h-full object-scale-down p-6 max-[767px]:object-contain " src="' . $card['image'] . '" alt="Imagem">';
                         echo '</div>';
                         //termina-imagem
 
                         // Elemento do botão de favorito vazio
                         echo '<div class="absolute flex justify-center items-center w-10 h-10 right-3 top-3 rounded-full p-2 z-10">';
-                        echo '<i id="heartEmpty_' . $index . '" class="fa-regular fa-heart text-white text-2xl" onclick="toggleFav(' . $index . ')"></i>';
+                        echo '<i id="heartEmpty' . $index . '" class="fa-regular fa-heart text-white text-2xl" onclick="toggleFav(' . $index . ')"></i>';
                         echo '</div>';
 
                         // Elemento do botão de favorito cheio
-                        echo '<div id="heartFull_' . $index . '" class="absolute flex justify-center items-center w-10 h-10 right-3 top-3 rounded-full p-2 z-10 hidden">';
-                        echo '<i class="fa-solid fa-heart text-2xl w-full h-full ... " onclick="toggleFav(' . $index . ')"></i>';
+                        echo '<div id="heartFull' . $index . '" class="absolute flex justify-center items-center w-10 h-10 right-3 top-2 rounded-full p-2 z-10 hidden">';
+                        echo '<i class="fa-solid fa-heart text-2xl text-red-500 w-full h-full ... " onclick="toggleFav(' . $index . ')"></i>';
                         echo '</div>';
+
                         //inicia-preco
-                        echo'<div class="texts p-4 flex w-full justify-between items-center max-[767px]:flex-col max-[767px]:w-6/12 ">';
-                            echo '<div class="item w-6/12">';
+                        echo'<div class="texts p-4 flex w-full justify-between items-center max-[767px]:flex-col max-[767px]:w-6/12 max-[767px]:justify-around  max-[767px]:h-full">';
+                            echo '<div class="item w-8/12">';
                                 echo '<h1 class="text-sm">' . $card['content'] . '</h1>';
                         
                             echo '</div>';
-                            echo '<div class="price flex justify-start text-2xl relative max-[767px]:absolute max-[767px]:bottom-4">';
+                            echo '<div class="price flex justify-start text-2xl relative ">';
                                 echo '<p  class="font-semibold">'.'<span class="absolute -top-2 -left-1 text-xs">'.$card['moeda'] .'</span>' . $card['preco'] . '</p>';
                             echo '</div>';
                         echo '</div>';
                         //termina-preco
 
-                        echo '<i class="fa-solid fa-circle-plus absolute bottom-2 hover:rounded-xl w-full text-center text-lime-300 text-lg"></i>';
+                        echo '<i class="fa-solid fa-circle-plus absolute bottom-2 hover:rounded-xl w-full text-center text-lime-300 text-lg max-[767px]:bottom-4 max-[767px]:drop-shadow-xl"></i>';
 
                         echo '</a>';
                         //termina-card
                 }
-                ?>
-                <hr class="w-10/12 border-2">
-            </div>
-            
+            ?>     
         </div>
-        
     </main>
 </body>
 </html>
