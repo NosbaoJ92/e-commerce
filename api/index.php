@@ -86,7 +86,7 @@
 
                         // Elemento do botão de favorito vazio
                         echo '<div class="absolute flex justify-center items-center w-10 h-10 right-3 top-3 rounded-full p-2 z-10">';
-                        echo '<i id="heartEmpty' . $index . '" class="fa-regular fa-heart text-white text-2xl" onclick="toggleFav(' . $index . ')"></i>';
+                        echo '<i id="heartEmpty' . $index . '" class="fa-regular fa-heart text-white text-2xl max-[767px]:text-zinc-300" onclick="toggleFav(' . $index . ')"></i>';
                         echo '</div>';
 
                         // Elemento do botão de favorito cheio
