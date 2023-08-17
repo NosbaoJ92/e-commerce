@@ -5,10 +5,14 @@
       },
       "api/img/*.png": {
         "runtime": "vercel-php@0.6.0"
+      },
+      "api/img/*.jpg": {
+        "runtime": "vercel-php@0.6.0"
       }
     },
     "routes": [
       { "src": "/(.*)",  "dest": "/api/index.php" },
-      { "src": "/(.*)",  "dest": "/img/*.png" }
+      { "src": "/(.*)",  "dest": "/img/*.png" },
+      { "src": "/(.*)",  "dest": "/img/*.jpg" }
     ]
   }
