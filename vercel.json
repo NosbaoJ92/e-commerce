@@ -9,6 +9,11 @@
     },
     "routes": [
       { "src": "/(.*)",  "dest": "/api/index.php" },
-      { "src": "/(.*)",  "dest": "/api/img/earbuds.png" }
+      { "src": "/(.*)",  "dest": "/api/img/earbuds.png" },
+      { "src": "/(.*)",  "dest": "/api/img/headset.png" },
+      { "src": "/(.*)",  "dest": "/api/img/mouseG502.png" },
+      { "src": "/(.*)",  "dest": "/api/img/notbook_xiaomi.png" },
+      { "src": "/(.*)",  "dest": "/api/img/ps4.png" },
+      { "src": "/(.*)",  "dest": "/api/img/xiaomi.png" }
     ]
   }
