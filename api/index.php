@@ -73,12 +73,12 @@
             <div class="w-8/12 flex flex-wrap justify-center gap-2 mt-6 max-[767px]:w-full max-[767px]:gap-3 ">
                 <?php
                     $cards = array(      
-                        array('image' => '../img/xiaomi.png', 'content' => 'Xiaomi Mi 1', 'moeda' => 'R$', 'preco' => '785,99'),                         
-                        array('image' => '../img/notebook_xiaomi.png', 'content' => 'Xiaomi Mi Notebook Air 12.5', 'moeda' => 'R$', 'preco' => '5.785,99'),                          
-                        array('image' => '../img/earbuds.png', 'content' => 'EarBuds', 'moeda' => 'R$', 'preco' => '399,90'),                          
-                        array('image' => '../img/ps4.png', 'content' => 'Playstation 4', 'moeda' => 'R$', 'preco' => '3999,90'),                          
-                        array('image' => '../img/mouseg502.png', 'content' => 'Logitech G502', 'moeda' => 'R$', 'preco' => '299,00'),                          
-                        array('image' => '../img/headset.png', 'content' => 'Headset Logitech', 'moeda' => 'R$', 'preco' => '399,00'),                          
+                        array('image' => '../api/img/xiaomi.png', 'content' => 'Xiaomi Mi 1', 'moeda' => 'R$', 'preco' => '785,99'),                         
+                        array('image' => '../api/img/notebook_xiaomi.png', 'content' => 'Xiaomi Mi Notebook Air 12.5', 'moeda' => 'R$', 'preco' => '5.785,99'),                          
+                        array('image' => '../api/img/earbuds.png', 'content' => 'EarBuds', 'moeda' => 'R$', 'preco' => '399,90'),                          
+                        array('image' => '../api/img/ps4.png', 'content' => 'Playstation 4', 'moeda' => 'R$', 'preco' => '3.999,90'),                          
+                        array('image' => '../api/img/mouseg502.png', 'content' => 'Logitech G502', 'moeda' => 'R$', 'preco' => '299,00'),                          
+                        array('image' => '../api/img/headset.png', 'content' => 'Headset Logitech', 'moeda' => 'R$', 'preco' => '399,00'),                          
                     );
 
                     foreach ($cards as $index => $card) {
